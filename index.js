@@ -13,6 +13,7 @@ conectDB()
 
 require('./routes/user')(app)
 require('./routes/genre')(app)
+require('./routes/book')(app)
 
 app.listen(3000, () => {
     console.log('El servidor se levantó correctamente')
