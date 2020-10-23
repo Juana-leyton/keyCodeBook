@@ -44,7 +44,7 @@ exports.update = (req, res) => {
         age: req.body.age 
     }
 
-    UserModel.findByIdAndUpdate(req.params.id, user)
+    UserModel.findByIdAndUpdate(req.params.id, user, {new: true})
     .then(
         (userUpdate) => {
             res.send(userUpdate)
